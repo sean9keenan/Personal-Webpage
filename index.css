@@ -1,190 +1,207 @@
+/*
+ * Skeenan.com CSS sheet
+ *
+ * This defines the styles for www.skeenan.com
+ * Media specific styles are defined at the bottom
+ *
+ * author: Sean Keenan, sean@skeenan.com
+ *
+**/
+
+/* Import Droid Sans Font */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
-img {
-    max-width: 100%;
-}
-hr {
-    width: auto;
-    height: 1px;
-    background: rgba(0, 0, 0, .3);
-}
 
+/* Sets the default font and background (with gradient if on webkit) */
 html {
-    height:100%;
-    font-family: 'Droid Sans', sans-serif;
-    background: url(./static/bg-alt.png);
-    background: -webkit-gradient( 
-        radial, 50% 30%, 800, 50% 0%, 500, 
-        from(rgba(0, 0, 0, .7)), 
-        to(rgba(50, 50, 50, 0.2))), url(./static/bg-alt.png);
-    background-attachment: fixed;
+  height:100%;
+  font-family: 'Droid Sans', sans-serif;
+  background: url(./static/bg-alt.png);
+  background: -webkit-gradient( 
+      radial, 50% 30%, 800, 50% 0%, 500, 
+      from(rgba(0, 0, 0, .7)), 
+      to(rgba(50, 50, 50, 0.2))), url(./static/bg-alt.png);
+  background-attachment: fixed;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+body { margin: 0; padding: 0; }
+
+/* Format table for header */
+table { margin: 0 auto;}
+
+/* Prevent Image overflowing */
+img { max-width: 100%; }
+
+/* Stylize horizontal reference lines */
+hr {
+  height: 1px;
+  background: rgba(0, 0, 0, .3);
+  border-style: none;  /* I hate border styles */
 }
 
+/* Default Paragraph Styles */
 p {
   font-size: 14px; 
-  opacity: .75
+  opacity: .75;
 }
 
+/* Convenience tags to center/right align text */
+.center { text-align: center; }
+.right { text-align: right; }
 
-#name {
-    /*font: 33px Helvetica, Arial, Sans-Serif;*/
-    /*color: #EEEEEE; */
-    color: #FFFFFF;
-    text-shadow: 
-        0px 2px 10px #000000,
-        0px 2px 30px #000000
-    ;
-}
 
-#profilepic {
-    height: 82px;
-    width: 82px;
-    background: url(./static/me_82x82.png);
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    /*background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 80, from(rgba(0,0,0,0)), to(rgba(0,0,0,1))), url(me_82x82.png);
-    background: -moz-radial-gradient(50% 50%, circle, rgba(0,0,0,0) 40px, rgba(0,0,0,1) 80px), url(me_82x82.png);*/
-}
+/* Styles links in a main content template */
+.templateLink { color: black; }
 
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Container / Bounding box styles
+ */
+
+/* Stylize the outermost container, setting max width as well */
 .container {
-    padding: 0;
-    margin: 21px;
-    background: rgba(255, 255, 255, .3);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 650px;
-    padding: 20px;
-    border-radius: 10px;
+  margin: 21px auto;
+  max-width: 650px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .3);
+  box-shadow: inset rgb(0, 0, 0) 0 0 11px;
 }
+
+/* Stylize the container that holds most of the content */
 .container-inner {
-    background: rgba(255, 255, 255, .8);
-    padding: 20px;
-    border-radius: 10px;
+  background: rgba(255, 255, 255, .75);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset rgb(0, 0, 0) 0 0 3px;
 }
 
-.header {
-    display: table-cell;
-    margin-bottom: auto;
-    margin-top: auto;
-    vertical-align: middle;
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Header bar styles
+ */
+
+/* Make main name on the site white, with heavy shadow for what I think
+ * is a neat effect (a few people disagree with me though :) */
+#name {
+  color: #FFFFFF;
+  text-shadow: 
+      0px 2px 10px #000000,
+      0px 2px 30px #000000;
+  display:inline;
+  margin-left: 15px;
 }
 
-.center {
-    text-align: center;
+/* My profile picture in the title bar, rounded with CSS */
+#profilepic {
+  height: 82px;
+  width: 82px;
+  background: url(./static/me_82x82.png);
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  /* Add a bit of a shadow on the outside and inside, inside
+     makes the white edge a bit less harsh */
+  box-shadow: rgb(0, 0, 0) 0 0 10px, inset #000 0 0 1px;
 }
 
-#tophr
-{
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    border-style: none;
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Menu on top styles
+ */
+
+#nav { text-align:center; padding:0; }
+
+#nav li { display:inline; }
+
+/* Style for menu links s*/
+#nav li a {   
+  font-family:Arial;
+  font-size:12px;
+  text-decoration: none;
+  float:left;
+  padding-bottom: 16px;
+  color:#555555;
+  border-bottom:1px;
+  border-bottom-color:rgba(0, 0, 0, .3);
+  border-bottom-style:solid;
+  width: 33.333%;
 }
 
-#nav li a:hover 
-{
-   padding-bottom:14px;
-   border-bottom:2px;
-   border-bottom-style:solid;
-   border-bottom-color:rgba(0, 0, 0, .3);
-   text-shadow: 0px 0px 20px #FaFaFa;
-   /*margin:-1px;*/
+/* Hover style on menu, underline, reduce height, shadow text*/
+#nav li a:hover {
+  padding-bottom: 14px;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, .3);
+  text-shadow:  0px 0px 10px rgba(19, 18, 18, 0.20);
 }
 
-#nav li a 
-{   
-   font-family:Arial;
-   font-size:12px;
-   text-decoration: none;
-   float:left;
-   padding:0px;
-   padding-top:0px;
-   padding-bottom: 16px;
-   color:#555555;
-   border-bottom:1px;
-   border-bottom-color:rgba(0, 0, 0, .3);
-   border-bottom-style:solid;
-   width: 33.333%;
-}
 
-#nav li 
-{
-    display:inline;
-
-}
-#nav
-{
-    text-align:center;
-    padding:0;
-}
-
-#nav ul {
-display:inline-block;
-list-style:none; 
-}
-
-#stuff {
-    font-size: 35px;
-}
-
-#awesome {
-    color:rgba(0, 0, 0, .7);
-}
-#awesomeText {
-    /*text-shadow: 0px 0px 8px gray;*/
-}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Footer styles 
+ */
 
 #mailMeDiv {font-size: 70%; opacity: .7; text-align: right;}
-#mailMeLink { display: block; color: black; text-decoration: initial; text-align: left;
-  /*height:0px;*/
+#mailMeLink { display: block; color: black; text-decoration: initial; text-align: left;}
+/* End Footer Styles */
+
+
+/*********************************************************
+ *
+ * Start Styles that are specific to pages being browsed
+ *
+ *********************************************************/
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Home Page Styles
+ */
+
+/* The text that reads I build awesome stuff */
+#stuff {
+  text-align: center;
+  padding-top: 55px;
 }
 
-.templateLink { 
-    color: black; 
-    /*text-decoration: initial */
+/* The text that reads "Someday this too will be awesome" 
+   This is initially invisble, faded in with javascript */
+#awesome {
+  text-align: center;
+  opacity: 0;
+  color:rgba(0, 0, 0, .7);
 }
 
-.project-header:nth-of-type(even) {
-  text-align:right;
-}
-.project-p:nth-of-type(even) {
-  text-align:right;
-}
-.project-p {
+/* The word awesome in "I build awesome stuff" */
+#awesomeText {}
+
+/* End Home Page Styles */
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Project Page Styles
+ */
+
+.project-div { padding: 7px; }
+
+.top-project-header { text-align: center; margin-bottom: 0px; opacity: .85; }
+
+/* Contains a single project */
+.project-container { display: table; margin: 0 auto; }
+
+/* Makes every other project right aligned */
+.project-container (h2,p):nth-of-type(even) { text-align:right; }
+
+.project-header { opacity: .85; }
+
+.project-text,.project-img {
+  display: table-cell;
+  width: 50%;
   vertical-align: middle;
 }
 
-.project-header {
-  margin: 0px; 
-  opacity: .85;
-}
+/* Format images inside their containers */
+.project-img * { display: block; margin: 0 auto; border-radius: 5px;}
 
-.project-container {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project-img {
-  width: 50%;
-  border-radius: 5px;
-  display: table-cell;
-}
-
-.project-img * {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project-text {
-  display: table-cell;
-  width: 50%;
-  vertical-align: middle;
-}
+/* The three little projects at the bottom of the page */
 .project-other-container {
   display: table-cell;
   width: 33.33%;
@@ -195,18 +212,28 @@ list-style:none;
   border-left-style: dotted;
   vertical-align: bottom;
 }
-.project-other-container:first-of-type {
-  border-left-style: none;
-}
-.project-other-p{
-  text-align: center;
-  margin: 0px;
-}
 
-.right {
-  text-align: right;
-}
+/* The first one shouldn't have a left border */
+.project-other-container:first-of-type { border-left-style: none; }
 
+/* The text under the little containers */
+.project-other-p{ text-align: center; margin: 0px; }
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * About Page Styles
+ */
+
+.about-div {padding: 10px;}
+
+.about-div h2 { margin-bottom: 0px; opacity: .85;}
+
+.about-div p {font-size: 14px; opacity: .75;}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Media Specific Queries
+ */
 
 @media only screen and (max-width: 1023px) {
 /* iPad? */
@@ -219,25 +246,12 @@ list-style:none;
 @media handheld, screen and (max-width: 600px){
 /* small things */
 
-    .container {
-        margin: 0;
-        padding: 4px;
-        min-width:300px;
-        position: relative;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-    }.container-inner {position: relative;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 4px;
-    }
+  .container { margin: 0; padding: 4px; min-width: 300px; }
 
-  .project-text { display: table-row; width: 100%;}
-  .project-img { display: table-row; width: 100%;}
+  .container-inner { margin: 4px; }
+
+  /* Make the project text and image on their own rows */
+  .project-text,.project-img { display: table-row; width: 100%;}
 
   .large-only {display: none;}
 }
