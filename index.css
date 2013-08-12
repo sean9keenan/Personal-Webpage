@@ -1,0 +1,244 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+img {
+    max-width: 100%;
+}
+hr {
+    width: auto;
+    height: 1px;
+    background: rgba(0, 0, 0, .3);
+}
+
+html {
+    height:100%;
+    font-family: 'Droid Sans', sans-serif;
+    background: url(./static/bg-alt.png);
+    background: -webkit-gradient( 
+        radial, 50% 30%, 800, 50% 0%, 500, 
+        from(rgba(0, 0, 0, .7)), 
+        to(rgba(50, 50, 50, 0.2))), url(./static/bg-alt.png);
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+  font-size: 14px; 
+  opacity: .75
+}
+
+
+#name {
+    /*font: 33px Helvetica, Arial, Sans-Serif;*/
+    /*color: #EEEEEE; */
+    color: #FFFFFF;
+    text-shadow: 
+        0px 2px 10px #000000,
+        0px 2px 30px #000000
+    ;
+}
+
+#profilepic {
+    height: 82px;
+    width: 82px;
+    background: url(./static/me_82x82.png);
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    /*background: -webkit-gradient(radial, 50% 50%, 40, 50% 50%, 80, from(rgba(0,0,0,0)), to(rgba(0,0,0,1))), url(me_82x82.png);
+    background: -moz-radial-gradient(50% 50%, circle, rgba(0,0,0,0) 40px, rgba(0,0,0,1) 80px), url(me_82x82.png);*/
+}
+
+.container {
+    padding: 0;
+    margin: 21px;
+    background: rgba(255, 255, 255, .3);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-inner {
+    background: rgba(255, 255, 255, .8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    display: table-cell;
+    margin-bottom: auto;
+    margin-top: auto;
+    vertical-align: middle;
+}
+
+.center {
+    text-align: center;
+}
+
+#tophr
+{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-style: none;
+}
+
+#nav li a:hover 
+{
+   padding-bottom:14px;
+   border-bottom:2px;
+   border-bottom-style:solid;
+   border-bottom-color:rgba(0, 0, 0, .3);
+   text-shadow: 0px 0px 20px #FaFaFa;
+   /*margin:-1px;*/
+}
+
+#nav li a 
+{   
+   font-family:Arial;
+   font-size:12px;
+   text-decoration: none;
+   float:left;
+   padding:0px;
+   padding-top:0px;
+   padding-bottom: 16px;
+   color:#555555;
+   border-bottom:1px;
+   border-bottom-color:rgba(0, 0, 0, .3);
+   border-bottom-style:solid;
+   width: 33.333%;
+}
+
+#nav li 
+{
+    display:inline;
+
+}
+#nav
+{
+    text-align:center;
+    padding:0;
+}
+
+#nav ul {
+display:inline-block;
+list-style:none; 
+}
+
+#stuff {
+    font-size: 35px;
+}
+
+#awesome {
+    color:rgba(0, 0, 0, .7);
+}
+#awesomeText {
+    /*text-shadow: 0px 0px 8px gray;*/
+}
+
+#mailMeDiv {font-size: 70%; opacity: .7; text-align: right;}
+#mailMeLink { display: block; color: black; text-decoration: initial; text-align: left;
+  /*height:0px;*/
+}
+
+.templateLink { 
+    color: black; 
+    /*text-decoration: initial */
+}
+
+.project-header:nth-of-type(even) {
+  text-align:right;
+}
+.project-p:nth-of-type(even) {
+  text-align:right;
+}
+.project-p {
+  vertical-align: middle;
+}
+
+.project-header {
+  margin: 0px; 
+  opacity: .85;
+}
+
+.project-container {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-img {
+  width: 50%;
+  border-radius: 5px;
+  display: table-cell;
+}
+
+.project-img * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-text {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+}
+.project-other-container {
+  display: table-cell;
+  width: 33.33%;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-left: rgba(0, 0, 0, .3);
+  border-left-width: 1px;
+  border-left-style: dotted;
+  vertical-align: bottom;
+}
+.project-other-container:first-of-type {
+  border-left-style: none;
+}
+.project-other-p{
+  text-align: center;
+  margin: 0px;
+}
+
+.right {
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 1023px) {
+/* iPad? */
+}
+
+@media screen and (min-width: 600px){
+  .small-only {display: none;}
+}
+
+@media handheld, screen and (max-width: 600px){
+/* small things */
+
+    .container {
+        margin: 0;
+        padding: 4px;
+        min-width:300px;
+        position: relative;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+    }.container-inner {position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 4px;
+    }
+
+  .project-text { display: table-row; width: 100%;}
+  .project-img { display: table-row; width: 100%;}
+
+  .large-only {display: none;}
+}
+

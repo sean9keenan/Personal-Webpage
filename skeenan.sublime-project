@@ -1,0 +1,51 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"/usr/local/bin/appcfg.py --oauth2 update /Users/skeenan/Google\\ Drive/Website\\ Hosting/skeenan"
+			],
+			"name": "App Engine",
+			"shell": true,
+			"variants":
+			[
+				{
+					"cmd":
+					[
+						"python -m SimpleHTTPServer"
+					],
+					"name": "Python Server",
+					"shell": true
+				}
+			]
+		},
+		{
+			"cmd":
+			[
+				"python -m SimpleHTTPServer"
+			],
+			"name": "Python Server",
+			"shell": true
+		}
+	],
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"*.out"
+			],
+			"follow_symlinks": true,
+			"path": "/Users/skeenan/Dropbox/Websites/skeenan"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/skeenan/Dropbox/Websites/ServerAutomation"
+		}
+	],
+	"settings":
+	{
+		"tab_size": 4
+	}
+}
