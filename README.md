@@ -1,6 +1,4 @@
-skeenan.github.com
+My Webpage
 ==================
 
-My Website
-
-  This is my personal website, I mostly use my own server to host my own git repo, but I have a copy of it here, since I figure it's probably not a bad idea. The diet.html and emily.html files were jokes, and the most up to date version of the website can be found at www.skeenan.com
+This is my personal website - and my first stab at web development in general (and the only framework I used was JQuery). It's relatively well documented, but does not use any modern tools or frameworks, and has a fair amount of repetition (in headers and such). Hosted at www.skeenan.com.
